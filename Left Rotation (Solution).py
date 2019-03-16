@@ -1,3 +1,4 @@
+#Marzo 15 2019
 import math
 import os
 import random
@@ -34,4 +35,9 @@ dLeftRotations = int(dLeftRotations)
 array = input()
 numbers = [int(d) for d in re.findall(r'-?\d+', array)]
 
-print(str(leftRotations(numbers,arraySize,dLeftRotations)))
+result = leftRotations(numbers,arraySize,dLeftRotations)
+
+strResult = ' '.join(str(e) for e in result)
+
+print(strResult)
+

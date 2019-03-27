@@ -17,12 +17,14 @@ def reverseArray(a,l):
 
 #se lee la longitud del array
 l = int(input()) 
-array = []
+array = input()
 
-#Se recibe el array
-for i in range(0,l):
-	x = int(input())
-	array.append(x)
+# con estas 2 lineas separo los numeros del string array y los gurafo en una lista como int  
+# osea pasa por ejemplo del string 1 2 3 4 5 a la lista [1,2,3,4,5]
+array = array.split(' ')
+array = [int(i) for i in array]
+
+
 
 #Se guarda la lista inversa en r 
 r = reverseArray(array,l)

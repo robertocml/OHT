@@ -1,4 +1,3 @@
-#Marzo 15 2019
 import math
 import os
 import random
@@ -11,7 +10,7 @@ import sys
 #la funcion crea dos listas, usando "slicing" y
 #regresa la concatenacion de ambas listas
 def rotate(l, n):
-    return l[-n:] + l[:-n]
+    return l[n:] + l[:n]
 
 
 
@@ -35,9 +34,8 @@ dLeftRotations = int(dLeftRotations)
 array = input()
 numbers = [int(d) for d in re.findall(r'-?\d+', array)]
 
-result = leftRotations(numbers,arraySize,dLeftRotations)
+result = rotate(numbers,dLeftRotations)
 
 strResult = ' '.join(str(e) for e in result)
 
 print(strResult)
-
